@@ -4,9 +4,9 @@
 
 LedLight::LedLight(/* args */)
 {
-    RED_PIN = 4;
-    GREEN_PIN = 5;
-    BLUE_PIN = 16;
+    RED_PIN = 5;
+    GREEN_PIN = 4;
+    BLUE_PIN = 2;
 }
 
 LedLight::~LedLight()
