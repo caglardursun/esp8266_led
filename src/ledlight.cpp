@@ -6,7 +6,7 @@ LedLight::LedLight(/* args */)
 {
     RED_PIN = 5;
     GREEN_PIN = 4;
-    BLUE_PIN = 2;
+    BLUE_PIN = 2;    
 }
 
 LedLight::~LedLight()
@@ -31,49 +31,49 @@ void LedLight::TurnOn(Colors color)
           digitalWrite(GREEN_PIN,LOW);    
           digitalWrite(BLUE_PIN,LOW);    
           Serial.println("RED_PIN triggered");
-          delay(1000);    
+          delay(DELAY);    
         break;
         case Colors::Green:
              digitalWrite(RED_PIN,LOW); 
              digitalWrite(GREEN_PIN,HIGH);    
              digitalWrite(BLUE_PIN,LOW);    
              Serial.println("GREEN_PIN triggered");
-             delay(1000);    
+             delay(DELAY);    
         break;
         case Colors::Blue:
           digitalWrite(RED_PIN,LOW);  
           digitalWrite(GREEN_PIN,LOW); 
           digitalWrite(BLUE_PIN,HIGH);    
           Serial.println("BLUE_PIN triggered");
-          delay(1000);    
+          delay(DELAY);    
         break;
         case Colors::RedGreen:
             digitalWrite(RED_PIN,HIGH);  
             digitalWrite(GREEN_PIN,HIGH);    
             digitalWrite(BLUE_PIN,LOW);    
             Serial.println("RED_PIN and GREEN_PIN triggered");
-            delay(1000); 
+            delay(DELAY); 
         break;
         case Colors::RedBlue:
             digitalWrite(RED_PIN,HIGH);  
             digitalWrite(GREEN_PIN,LOW);    
             digitalWrite(BLUE_PIN,HIGH);    
             Serial.println("RED_PIN and BLUE_PIN triggered");
-            delay(1000); 
+            delay(DELAY); 
         break;
         case Colors::GreenBlue:
            digitalWrite(RED_PIN,LOW);  
             digitalWrite(GREEN_PIN,HIGH);    
             digitalWrite(BLUE_PIN,HIGH);    
             Serial.println("RED_PIN and BLUE_PIN triggered");
-            delay(1000); 
+            delay(DELAY); 
         break;
         case Colors::White:
           digitalWrite(RED_PIN,HIGH);  
           digitalWrite(GREEN_PIN,HIGH);    
           digitalWrite(BLUE_PIN,HIGH);    
           Serial.println("White is triggered");
-          delay(1000); 
+          delay(DELAY); 
         break;
         default:
           Serial.println("Invalid Color");

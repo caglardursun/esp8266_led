@@ -16,6 +16,7 @@ class LedLight
       int RED_PIN;
       int GREEN_PIN;
       int BLUE_PIN;
+      static const int DELAY = 2000;
   public:
       LedLight(/* args */);
       void Setup();    
